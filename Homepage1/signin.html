@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signin.css">
+    <script src="https://kit.fontawesome.com/8458f20025.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  
+    <header>
+        <div class="top-bar">
+      
+          <ul>
+              <div class="right">
+               <li>Offers</li>
+              <li>Fanbook</li>
+              <li> Download App</li>
+              <li>TriBe Membership</li>   
+              </div>
+              <div class="left"> <li>Contact Us</li>
+              <li>Track Order</li></div>
+             
+  
+          </ul>
+      </div>
+  
+      <div id="top-nav">
+       
+      <div class="right">
+         <!-- <img src="https://images.bewakoof.com/web/ic-desktop-normal-bwkf-logo.svg" alt="bewakoof"> -->
+         <img src="/logoVM.png" alt="">
+         <h3>Men</h3>
+         <h3>Women</h3>
+         <h3>Mobile Covers</h3>
+      </div>
+       
+      <div class="left">
+             <form>
+                <input type="text" placeholder="🔍Search by product, catagory or collection">
+              </form>
+          <div class="verticalLine"></div>
+          <p>Login</p>
+          <span>🤍</span>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1IN8IYYHwOMEDVkIwfAn0qNVIPRquDAciHg&usqp=CAU" alt="">
+      </div>
+      </div>
+  </header>
+
+    <!-- header ends here -->
+    <div class="main">
+
+        <div class="leftlogin">
+          
+            <div>   <h2>WELCOME TO THE WORLD OF VOTRE MAGASIN!</h2>
+                <img src="https://images.bewakoof.com/web/group-19-1617704502.png" alt=""></div>
+          
+        </div>
+
+      <div class="rightlogin">
+          <div>
+         <div><h3 id="title">Sign Up</h3></div>
+        <form>
+            <div class="input-field" id="namefield">
+                <i class="fa-regular fa-user"></i> <input type="text" placeholder="Name">
+            </div>
+           <div class="input-field">
+             <i class="fa-regular fa-envelope"></i>
+            <input type="email" placeholder="Email">
+        </div>
+       <div class="input-field"><i class="fa-solid fa-lock"></i><input type="password" placeholder="password"></div>
+       <p>Lost password <a href="#">Click Here!</a></p>
+    </form>
+    <div class="flex">
+  
+       <button type="button" id="signupbtn">Sign up</button>
+         <button type="button" class="disable" id="signinbtn">Sign in</button>
+   
+  
+
+  </div>
+ 
+     </div>
+      </div>
+    </div>
+</body>
+<script>
+    let signupbtn=document.getElementById("signupbtn")
+    let signinbtn=document.getElementById("signinbtn")
+    let namefield=document.getElementById("namefield")
+    let title=document.getElementById("title")
+
+    signinbtn.onclick=function(){
+        namefield.style.maxHeight="0";
+        title.innerHTML="Sign In";
+        signupbtn.classList.add("disable")
+        signinbtn.classList.remove("disable")
+    }
+
+
+
+    
+    signupbtn.onclick=function(){
+        namefield.style.maxHeight="60px";
+        title.innerHTML="Sign In";
+        signupbtn.classList.remove("disable")
+        signinbtn.classList.add("disable")
+    }
+
+ </script>
+</html>

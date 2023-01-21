@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+    <script src="https://kit.fontawesome.com/8458f20025.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  
+    <header>
+        <div class="top-bar">
+      
+          <ul>
+              <div class="right">
+               <li>Offers</li>
+              <li>Fanbook</li>
+              <li> Download App</li>
+              <li>TriBe Membership</li>   
+              </div>
+              <div class="left"> <li>Contact Us</li>
+              <li>Track Order</li></div>
+             
+  
+          </ul>
+      </div>
+  
+      <div id="top-nav">
+       
+      <div class="right">
+      <a href="/homepage.html"><img  src="/logoVM.png" alt=""></a>
+         
+         <h3>Men</h3>
+         <h3>Women</h3>
+         <h3>Mobile Covers</h3>
+      </div>
+       
+      <div class="left">
+             <form>
+                <input type="text" placeholder="🔍Search by product, catagory or collection">
+              </form>
+          <div class="verticalLine"></div>
+          <p>Login</p>
+          <span><i class="fa-regular fa-heart"></i></i></span>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1IN8IYYHwOMEDVkIwfAn0qNVIPRquDAciHg&usqp=CAU" alt="">
+      </div>
+      </div>
+  </header>
+  <div class="main">
+
+    <div class="leftlogin">
+      
+        <div>   <h2>WELCOME TO THE WORLD OF VOTRE MAGASIN!</h2>
+            <img src="https://images.bewakoof.com/web/group-19-1617704502.png" alt=""></div>
+      
+    </div>
+ 
+  <div class="rightlogin">
+      <div>
+     <div><h3 id="title">Sign In</h3></div>
+    <form id="form">
+       <div class="input-field">
+         <i class="fa-regular fa-envelope"></i>
+        <input type="email" placeholder="Email" id="email">
+   </div>
+   <div class="input-field"><i class="fa-solid fa-lock"></i><input type="password" placeholder="password" id="password"></div>
+   <button id="subbmit">Submit</button>
+   <p>Lost password <a href="#">Click Here!</a></p>
+</form>
+<div class="flex">
+    <a href="/signup.html"> <button type="button" id="signupbtn">Sign up</button></a>
+
+<a href=""><buttontype="button" id="signinbtn">Sign in</button></a>
+   
+     
+</div>
+
+ </div>
+  </div>
+</div>
+    
+</body>
+<script>
+
+// java script here
+let signdata=JSON.parse(localStorage.getItem("account-data"))
+    let signArr=JSON.parse(localStorage.getItem("signup"))|| []
+  
+    let form=document.querySelector("#form")
+    form.addEventListener("submit",(e)=>{
+      e.preventDefault();
+      let email=document.getElementById("email")
+      let password=document.getElementById("password")
+
+      let obj={
+        email:email.value,
+        password:password.value
+      }
+      signArr.push(obj)
+      localStorage.setItem("signup",JSON.stringify(signArr))
+      if(email.value==signdata[0].email && password.value==signdata[0].password){alert ("Sign in Successful")
+     window.location.href="loggedinHomepage.html"
+    }
+      else{alert ("Wrong Credentials")}
+      
+      
+    })
+
+  
+  
+
+
+
+
+
+</script>
+
+</html>

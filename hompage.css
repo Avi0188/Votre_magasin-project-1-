@@ -202,7 +202,7 @@ header{
    footer{
        width: 100%;
        background-color: #181818;
-   padding-bottom: 30px;
+       padding-bottom: 30px;
    }
    .clr{
        color: #FDD835;
@@ -228,7 +228,12 @@ header{
    width: 80%;
    }
    #footer-last-section-para{
+    width: 90%;
     color: white;
+   margin-top: 50px;
+    margin: auto;
+    font-size: large;
+    text-align: justify;
    }
    /* ==================================================== */
    /* media queries for midium size */

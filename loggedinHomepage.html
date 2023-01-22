@@ -402,7 +402,7 @@ class="fav">
 <script>
 let naam=document.querySelector(".naam")
 let Arr=JSON.parse(localStorage.getItem("account-data"))
-   naam.innerHTML=Arr[0].name
+   naam.innerHTML=Arr[Arr.length-1].name || Arr[0].name
 
  
 

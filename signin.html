@@ -67,17 +67,17 @@
         <input type="email" placeholder="Email" id="email">
    </div>
    <div class="input-field"><i class="fa-solid fa-lock"></i><input type="password" placeholder="password" id="password"></div>
-   <button id="subbmit">Admin Login</button>
+   <button id="subbmit">Login</button>
    <p>Lost password <a href="#">Click Here!</a></p>
 </form>
 <div class="flex">
     <a href="/signup.html"> <button type="button" id="signupbtn">Sign up</button></a>
 
-<a href="/signin.html"><buttontype="button" id="signinbtn">User Sign in</button></a>
+<a href="/signin.html"><buttontype="button" id="signinbtn">Sign in</button></a>
    
-<div id="admin">
+<!-- <div id="admin">
   <a href="/Admin.html"><button>Admin Login</button></a>
-</div>
+</div> -->
 
 </div>
 </div>
@@ -96,6 +96,7 @@ let signdata=JSON.parse(localStorage.getItem("account-data"))
     let signArr=JSON.parse(localStorage.getItem("signup"))|| []
   
     let form=document.querySelector("#form")
+
     form.addEventListener("submit",(e)=>{
       e.preventDefault();
 
@@ -106,7 +107,8 @@ let signdata=JSON.parse(localStorage.getItem("account-data"))
       signArr.push(obj)
       localStorage.setItem("signup",JSON.stringify(signArr))
       if(email.value==signdata[0].email && password.value==signdata[0].password
-      ||email.value==signdata[signdata.length-1].email && password.value==signdata[signdata.length-1].password
+      ||email.value==signdata[signdata.length-1].email && password.value==signdata[signdata.length-1].password  
+      ||email.value==signdata[signdata.length-2].email && password.value==signdata[signdata.length-2].password
       ){alert ("Sign in Successful")
      window.location.href="loggedinHomepage.html"
     }
